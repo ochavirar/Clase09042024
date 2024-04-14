@@ -1,11 +1,14 @@
 name: work 1 Omar
-on [push]:
-  branches:
-    - 'test_1'
-    build:
-      runs-on: ubuntu-latest
-      steps:
+on:
+  push:
+    branches:
+      - 'test_1'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
       - name: Prints a salute when test_1 changes
-      run: echo 'Impresión 1'
-      run: echo 'Impresión 2'
-      run: echo 'Impresión 3'
+        run: |
+          echo 'Impresión 1'
+          echo 'Impresión 2'
+          echo 'Impresión 3'

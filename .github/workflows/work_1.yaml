@@ -1,8 +1,17 @@
-name: work 1 Omar
+name: Node.js CI
+
 on: [push]
-jobs: 
+
+jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-    - name: Print a salute
-      run: echo 'Hola a todos'
+      - uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20.x"
+      - run: console.log('Omar Chavira Román')
+      - run: node -v
+      - run: console.log('733265')
